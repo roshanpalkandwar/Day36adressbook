@@ -25,6 +25,7 @@ namespace Day36AdressBook
             Console.WriteLine("10. Get all enteries to DB");
             Console.WriteLine("11. Update Enteries");
             Console.WriteLine("12. Retrive enteries by City and State");
+            Console.WriteLine("13. Add Contacts to the address book database");
             Console.WriteLine("Enter a number");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -84,6 +85,20 @@ namespace Day36AdressBook
                 case 12:
                     RetrievePerson person = new RetrievePerson();
                     person.RetrievePersonDetails();
+                    break;
+                case 13:
+                    InsertContact insert = new InsertContact();
+                    ContactModel contacts = new ContactModel();
+                    contacts.FirstName = "vashanvi";
+                    contacts.LastName = "lokhande";
+                    contacts.Address = "pune";
+                    contacts.City = "Pune";
+                    contacts.State = "Maharashtra";
+                    contacts.Zip = 456789;
+                    contacts.PhoneNumber = 7788864534;
+                    contacts.Email = "vashanvi@gmail.com";
+
+                    insert.AddContact(contacts);
                     break;
                 default:
                     Console.WriteLine("Choose a appropriate option");
