@@ -13,7 +13,7 @@ namespace Day36AdressBook
     {
         public static void CsvSerialize(List<Contacts> list)
         {
-            string csvFilePath = @"C:\Users\User\Desktop\MysqlAssignment\Day36adressBook\Day36adressbook\Day36AdressBook\CsvData.txt";
+            string csvFilePath = @"C:\Users\User\Desktop\MysqlAssignment\Day36adressBook\Day36adressbook\Day36AdressBook\CsvData1.txt";
       
         StreamWriter streamWriter = new StreamWriter(csvFilePath);
             CsvWriter csvWriter = new CsvWriter(streamWriter, CultureInfo.InvariantCulture);
@@ -25,7 +25,7 @@ namespace Day36AdressBook
 
         public static void CsvDeserialize()
         {
-            string csvFilePath = @"C:\Users\User\Desktop\MysqlAssignment\Day36adressBook\Day36adressbook\Day36AdressBook\CsvData.txt";
+            string csvFilePath = @"C:\Users\User\Desktop\MysqlAssignment\Day36adressBook\Day36adressbook\Day36AdressBook\CsvData1.txt";
 
             StreamReader streamReader = new StreamReader(csvFilePath);
             CsvReader csvReader = new CsvReader(streamReader, CultureInfo.InvariantCulture);

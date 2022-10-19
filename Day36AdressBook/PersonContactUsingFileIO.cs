@@ -11,7 +11,7 @@ namespace Day36AdressBook
     {
         public void Serialize(List<Contacts> list )
         {
-            FileStream file = new FileStream(@"C:\Users\User\Desktop\MysqlAssignment\Day36adressBook\Day36adressbook\Day36AdressBook\Contacts.txt", FileMode.OpenOrCreate);
+            FileStream file = new FileStream(@"C:\Users\User\Desktop\MysqlAssignment\Day36adressBook\Day36adressbook\Day36AdressBook\Contacts1.txt", FileMode.OpenOrCreate);
 
             BinaryFormatter formatter1 = new BinaryFormatter();
             formatter1.Serialize(file, list);

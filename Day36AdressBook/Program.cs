@@ -21,6 +21,7 @@ namespace Day36AdressBook
             Console.WriteLine("6. Get number of contact person in address book");
             Console.WriteLine("7. Read or Write the Address Book with Persons Contact into a File using File IO");
             Console.WriteLine("8. Read/Write the Address Book with Persons Contact as CSV File");
+            Console.WriteLine("9. Read or Write the Address Book with Persons Contact as JSON File");
             Console.WriteLine("Enter a number");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -54,7 +55,11 @@ namespace Day36AdressBook
                     break;
                 case 8:
                     PersonContactsUsingCSVFile.CsvSerialize(list);
-                    //PersonContactsUsingCSVFile.CsvDeserialize();
+                    PersonContactsUsingCSVFile.CsvDeserialize();
+                    break;
+                case 9:
+                   // PersonContactsUsingJSONFile.Serialize(list);
+                    PersonContactsUsingJSONFile.Deserialize();
                     break;
                 default:
                     Console.WriteLine("Choose a appropriate option");
