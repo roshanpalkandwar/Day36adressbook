@@ -26,6 +26,8 @@ namespace Day36AdressBook
             Console.WriteLine("11. Update Enteries");
             Console.WriteLine("12. Retrive enteries by City and State");
             Console.WriteLine("13. Add Contacts to the address book database");
+            Console.WriteLine("14. Add Contacts to the address book database Using Threade");
+
             Console.WriteLine("Enter a number");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -99,6 +101,20 @@ namespace Day36AdressBook
                     contacts.Email = "vashanvi@gmail.com";
 
                     insert.AddContact(contacts);
+                    break;
+                case 14:
+                    InsertContactUsingThread insertcontact = new InsertContactUsingThread();
+                    ContactModel contacts1 = new ContactModel();
+                    contacts1.FirstName = "Samita";
+                    contacts1.LastName = "Bharati";
+                    contacts1.Address = "Pune";
+                    contacts1.City = "Pune";
+                    contacts1.State = "Maharashtra";
+                    contacts1.Zip = 456789;
+                    contacts1.PhoneNumber = 9976453424;
+                    contacts1.Email = "samita@gmail.com";
+
+                    insertcontact.AddContact(contacts1);
                     break;
                 default:
                     Console.WriteLine("Choose a appropriate option");
