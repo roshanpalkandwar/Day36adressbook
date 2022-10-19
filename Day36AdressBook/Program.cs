@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace Day36AdressBook
 {
@@ -17,6 +18,7 @@ namespace Day36AdressBook
             Console.WriteLine("3. Delete the contact in address book");
             Console.WriteLine("4. Add multiple person in address book");
             Console.WriteLine("5. Search person in address book");
+            Console.WriteLine("6. Get number of contact person in address book");
             Console.WriteLine("Enter a number");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -38,7 +40,10 @@ namespace Day36AdressBook
                     break;
                 case 5:
                     SearchPerson.SearchPersonInAddressBook(list);
-                    Console.WriteLine();
+                    
+                    break;
+                case 6:
+                    GetNumber.GetNumberInAddressBook(list);
                     break;
                 default:
                     Console.WriteLine("Choose a appropriate option");
