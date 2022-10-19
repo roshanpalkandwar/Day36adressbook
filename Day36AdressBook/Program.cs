@@ -16,7 +16,13 @@
                 case 1:
                     CreateContacts.CreateContactsInAddressBook();
                     break;
-                
+                case 2:
+                    AddNewContacts.AddNewcontactsInAddressBook();
+                    break;
+                default:
+                    Console.WriteLine("Choose a appropriate option");
+                    break;
+
             }
         }
     }
