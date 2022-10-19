@@ -1,28 +1,40 @@
-﻿namespace Day36AdressBook
+﻿using System.Collections.Generic;
+
+namespace Day36AdressBook
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address Book Program");
+
+            List<Contacts> list = new List<Contacts>();
+           // CreateContacts.CreateContactsInAddressBook(list);
+
             Console.WriteLine("Choose a option");
             Console.WriteLine("1. Create a Contacts in address book");
             Console.WriteLine("2. Add a contacts in address book");
+            Console.WriteLine("3. Delete the contact in address book");
             Console.WriteLine("Enter a number");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
             {
                 case 1:
-                    CreateContacts.CreateContactsInAddressBook();
+                    CreateContacts.CreateContactsInAddressBook(list);
                     break;
                 case 2:
                     AddNewContacts.AddNewcontactsInAddressBook();
                     break;
+                case 3:
+
+                    DeleteContact.DeleteContactInAddreddBook(list);
+
+                    break;
                 default:
                     Console.WriteLine("Choose a appropriate option");
                     break;
-
+                
             }
         }
     }
