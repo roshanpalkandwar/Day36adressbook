@@ -24,6 +24,7 @@ namespace Day36AdressBook
             Console.WriteLine("9. Read or Write the Address Book with Persons Contact as JSON File");
             Console.WriteLine("10. Get all enteries to DB");
             Console.WriteLine("11. Update Enteries");
+            Console.WriteLine("12. Retrive enteries by City and State");
             Console.WriteLine("Enter a number");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -79,6 +80,10 @@ namespace Day36AdressBook
 
                     update.Equals(contact);
 
+                    break;
+                case 12:
+                    RetrievePerson person = new RetrievePerson();
+                    person.RetrievePersonDetails();
                     break;
                 default:
                     Console.WriteLine("Choose a appropriate option");
