@@ -15,6 +15,7 @@ namespace Day36AdressBook
             Console.WriteLine("1. Create a Contacts in address book");
             Console.WriteLine("2. Add a contacts in address book");
             Console.WriteLine("3. Delete the contact in address book");
+            Console.WriteLine("4. Add multiple person in address book");
             Console.WriteLine("Enter a number");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -30,6 +31,9 @@ namespace Day36AdressBook
 
                     DeleteContact.DeleteContactInAddreddBook(list);
 
+                    break;
+                case 4:
+                    AddMultiplePerson.AddMultiplePersonInAddressBook(list);
                     break;
                 default:
                     Console.WriteLine("Choose a appropriate option");
