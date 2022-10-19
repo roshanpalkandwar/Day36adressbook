@@ -23,6 +23,7 @@ namespace Day36AdressBook
             Console.WriteLine("8. Read/Write the Address Book with Persons Contact as CSV File");
             Console.WriteLine("9. Read or Write the Address Book with Persons Contact as JSON File");
             Console.WriteLine("10. Get all enteries to DB");
+            Console.WriteLine("11. Update Enteries");
             Console.WriteLine("Enter a number");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -66,7 +67,19 @@ namespace Day36AdressBook
                     RetrieveEntries entries = new RetrieveEntries();
                     entries.GetEntries();
                     break;
+                case 11:
 
+                    UpdateContact update = new UpdateContact();
+                    ContactModel contact = new ContactModel();
+
+                    contact.FirstName = "vishal";
+                    contact.Address = "Nashik";
+                    contact.City = "nagpur";
+                    contact.Zip = 456789;
+
+                    update.Equals(contact);
+
+                    break;
                 default:
                     Console.WriteLine("Choose a appropriate option");
                     break;
