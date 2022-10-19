@@ -19,6 +19,7 @@ namespace Day36AdressBook
             Console.WriteLine("4. Add multiple person in address book");
             Console.WriteLine("5. Search person in address book");
             Console.WriteLine("6. Get number of contact person in address book");
+            Console.WriteLine("7. Read or Write the Address Book with Persons Contact into a File using File IO");
             Console.WriteLine("Enter a number");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -48,7 +49,12 @@ namespace Day36AdressBook
                 default:
                     Console.WriteLine("Choose a appropriate option");
                     break;
-                
+                case 7:
+                    PersonContactUsingFileIO personContactUsingFileIO = new PersonContactUsingFileIO();
+                    personContactUsingFileIO.Serialize(list);
+                   // personContactUsingFileIO.Deserialize();
+                    break;
+
             }
         }
     }
